@@ -2,6 +2,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import pizza from "../assets/pizza.jpg";
+import burger from "../assets/burger.jpg";
+import pasta from "../assets/pasta.jpg";
+import sandwich from "../assets/sandwich.jpeg";
 
 const Home = () => {
   const [taglineIndex, setTaglineIndex] = useState(0);
@@ -20,10 +24,10 @@ const Home = () => {
   }, []);
 
   const featuredItems = [
-    { id: 1, name: "Pizza", description: "Cheesy and delicious", price: "Rs 100", image: "/assets/pizza.jpg" },
-    { id: 2, name: "Burger", description: "Juicy and flavorful", price: "Rs 89", image: "/assets/burger.jpg" },
-    { id: 3, name: "Pasta", description: "Rich and creamy", price: "Rs 89", image: "/assets/pasta.jpg" },
-    { id: 4, name: "Sandwich", description: "Grilled chicken sandwich", price: "Rs 80", image: "/assets/sandwich.jpeg" },
+    { id: 1, name: "Pizza", description: "Cheesy and delicious", price: "Rs 100", image: pizza },
+    { id: 2, name: "Burger", description: "Juicy and flavorful", price: "Rs 89", image: burger },
+    { id: 3, name: "Pasta", description: "Rich and creamy", price: "Rs 89", image: pasta },
+    { id: 4, name: "Sandwich", description: "Grilled chicken sandwich", price: "Rs 80", image: sandwich },
   ];
 
   return (
@@ -45,7 +49,6 @@ const Home = () => {
               <h3>{item.name}</h3>
               <p>{item.description}</p>
               <p className="price">{item.price}</p>
-              
             </div>
           ))}
         </div>
